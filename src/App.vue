@@ -1,8 +1,11 @@
 <template>
+  <animationTitle />
+  <borderElement />
   <loaderSection />
-  <backgroundHeader />
   <headerSection />
-  <orbHeaderButton />
+
+  <backgroundHeader />
+  <testSection />
   <backgroundIntroduction />
   <horizontalIntroduction />
   <introdctionSection />
@@ -19,10 +22,11 @@
 </template>
 
 <script>
+import animationTitle from "./components/00animationTitle.vue";
+import borderElement from "./components/00borderElement.vue";
 import loaderSection from "./components/01loaderSection.vue";
 import backgroundHeader from "./components/02backgroundHeader.vue";
 import headerSection from "./components/02headerSection.vue";
-import orbHeaderButton from "./components/02orbHeaderButton.vue";
 import backgroundIntroduction from "./components/03backgroundIntroduction.vue";
 import horizontalIntroduction from "./components/03horizontalIntroduction.vue";
 import introdctionSection from "./components/03introductionSection.vue";
@@ -36,13 +40,17 @@ import worldSection from "./components/07worldSection.vue";
 import transitionBackgroundWorld from "./components/08transitionBackgroundWorld.vue";
 import secondWorldSection from "./components/09secondWorldSection.vue";
 import backgroundNatureWorld from "./components/09backgroundNatureWorld.vue";
+import testSection from "./components/00testSection.vue";
 
 export default {
   components: {
+    animationTitle,
+    borderElement,
+    testSection,
     loaderSection,
     backgroundHeader,
     headerSection,
-    orbHeaderButton,
+
     backgroundIntroduction,
     horizontalIntroduction,
     introdctionSection,
@@ -66,5 +74,12 @@ export default {
   font-weight: 500;
   src: url("../src/assets/fonts/Wigrum-Medium.woff2") format("woff2");
 }
+
+body {
+  margin: 0px;
+}
+
+/* * {
+  overflow-x: hidden;
+} */
 </style>
-./components/AloaderSection.vue./components/01loaderSection.vue./components/01loaderSection.vue./components/02backgroundHeader.vue./components/03backgroundIntroduction.vue./components/03horizontalIntroduction.vue./components/05audaSection.vue./components/05cardsAuda.vue./components/05outfitAuda.vue./components/07backgroundWingedWorld.vue./components/08worldSection.vue./components/07backgroundWingedWorld.vue./components/07worldSection.vue./components/08HtransitionBackgroundWorld.vue
