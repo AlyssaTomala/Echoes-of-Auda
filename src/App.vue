@@ -4,15 +4,15 @@
   <loaderSection />
   <headerSection />
   <horizontalIntroduction />
-  <transitionAuda />
+  <!-- <audaSection /> -->
+  <!-- <transitionAuda /> -->
+
   <backgroundHeader />
   <testSection />
   <backgroundIntroduction />
 
   <introdctionSection />
 
-  <audaSection />
-  <cardsAuda />
   <outfitAuda />
   <transitionWorld />
   <backgroundWingedWorld />
@@ -31,9 +31,9 @@ import headerSection from "./components/02headerSection.vue";
 import backgroundIntroduction from "./components/03backgroundIntroduction.vue";
 import horizontalIntroduction from "./components/03horizontalIntroduction.vue";
 import introdctionSection from "./components/03introductionSection.vue";
-import transitionAuda from "./components/04transitionAuda.vue";
-import audaSection from "./components/05audaSection.vue";
-import cardsAuda from "./components/05cardsAuda.vue";
+// import transitionAuda from "./components/04transitionAuda.vue";
+// import audaSection from "./components/05audaSection.vue";
+
 import outfitAuda from "./components/05outfitAuda.vue";
 import transitionWorld from "./components/06transitionWorld.vue";
 import backgroundWingedWorld from "./components/07backgroundWingedWorld.vue";
@@ -55,9 +55,9 @@ export default {
     backgroundIntroduction,
     horizontalIntroduction,
     introdctionSection,
-    transitionAuda,
-    audaSection,
-    cardsAuda,
+    // transitionAuda,
+    // audaSection,
+
     outfitAuda,
     transitionWorld,
     backgroundWingedWorld,

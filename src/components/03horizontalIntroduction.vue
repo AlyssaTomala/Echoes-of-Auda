@@ -3,7 +3,9 @@
     <div class="section2a">
       <div class="panel section2a1">
         <div>
-          <p class="animation-texte-horizontal texte-01">An adventure DLC</p>
+          <p class="animation-texte-horizontal texte-01">
+            <animationTitle v-if="showDLCTitle" texte="An adventure DLC" />
+          </p>
         </div>
       </div>
 
@@ -37,17 +39,34 @@
     </div>
     <div class="section2b"></div>
   </div>
-  <div class="section3"></div>
+  <div class="section3">
+    <cardsAudas />
+  </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import animationTitle from "./00animationTitle.vue";
+import cardsAudas from "./05cardsAuda.vue";
 
 export default {
+  data() {
+    return {
+      showDLCTitle: false,
+    };
+  },
+  components: {
+    animationTitle,
+    cardsAudas,
+  },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-    this.section2bAnimation();
+    this.section2bAnimation(
+      setTimeout(() => {
+        this.showDLCTitle = true;
+      }, 2800)
+    );
     this.textApparition();
 
     gsap.to(".section2a", {
@@ -156,47 +175,27 @@ export default {
           end: "bottom top",
         },
       });
-      gsap.from(".section2b", {
-        scale: 1,
-        y: "-50vh",
-        scrollTrigger: {
-          trigger: ".section3",
-          scrub: 1,
-          start: "70% center",
-          end: "bottom center",
-        },
-      });
-
-      gsap.to(".section2b", {
-        scale: 1,
-        y: "-100vh",
-        scrollTrigger: {
-          trigger: ".section3",
-          scrub: 1,
-          start: "90% center",
-          end: "bottom center",
-        },
-      });
 
       gsap.from(".section3", {
         scale: 1,
+        bottom: "0vh",
         scrollTrigger: {
           trigger: ".section3",
           scrub: 1,
-          start: "top center",
-          end: "bottom top",
+          start: "center bottom",
+          end: "bottom center",
         },
       });
       gsap.to(".section3", {
         scale: 1,
         zIndex: 20,
-        bottom: "20vh",
+        bottom: "125vh",
         background: "black",
         scrollTrigger: {
           trigger: ".section3",
           scrub: 1,
-          start: "center center",
-          end: "60% top",
+          start: "center bottom",
+          end: "bottom center",
         },
       });
     },
@@ -212,17 +211,18 @@ export default {
 }
 
 .section2 {
-  background: rgb(72, 123, 72);
+  background: rgba(72, 123, 72, 0);
 }
 
 .section2 p {
   font-family: "Wigrum";
   font-size: 50px;
-  opacity: 0.2;
+  opacity: 1;
+  color: white;
 }
 
 .section2a1 {
-  background: rgb(136, 36, 36);
+  background: rgb(88, 129, 95);
 }
 
 .section2a-text-container {
@@ -259,11 +259,11 @@ export default {
 .section2a2 {
   width: 225vw;
 
-  background: rgb(119, 119, 172);
+  background: rgb(79, 109, 79);
 }
 
 .section2a3 {
-  background: orange;
+  background: rgba(73, 97, 74, 0.516);
 }
 
 .panel {
@@ -279,12 +279,13 @@ export default {
   width: 100vw;
   opacity: 1;
   z-index: 10;
-  background: yellow;
+  background: rgb(132, 168, 137);
 }
 
 .section3 {
   background: aqua;
   position: relative;
+  border: 1px solid black;
   height: 200vh;
   z-index: 2;
 }
