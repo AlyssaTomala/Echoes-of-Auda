@@ -12,7 +12,7 @@ export default {
     gsap.to(".cadre", {
       opacity: 0.8,
       duration: 0.5,
-      delay: 4,
+      delay: 1.2,
     });
   },
 };
@@ -25,10 +25,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
   position: fixed;
-  z-index: 800;
+  z-index: 22222200;
   color: wheat;
+  pointer-events: none;
 }
 .cadre {
   width: 98%;

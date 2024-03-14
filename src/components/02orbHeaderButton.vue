@@ -14,8 +14,6 @@ import gsap from "gsap";
 
 export default {
   mounted() {
-    this.loaderanimation();
-    this.loaderanimation();
     gsap.to("#loader", {
       duration: 2,
       opacity: 0,
@@ -48,7 +46,7 @@ export default {
 .header-button {
   width: 100%;
   position: absolute;
-  z-index: 950;
+
   top: 45vh;
   text-align: center;
   display: flex;
@@ -59,7 +57,7 @@ export default {
 #headerOrbButton {
   opacity: 1;
   cursor: pointer;
-  width: 4.2vw;
+  width: 2.7vw;
   aspect-ratio: 1/1;
   border-radius: 500px;
   border: none;
@@ -73,7 +71,9 @@ export default {
 }
 
 .button-border {
-  width: 4.8vw;
+  width: 3vw;
+  z-index: 950;
+  position: relative;
   aspect-ratio: 1/1;
   border-radius: 500px;
   border: 1.5px solid rgb(255, 255, 255);
@@ -125,7 +125,7 @@ export default {
 }
 
 .button-background-animation {
-  width: 6.1vw;
+  width: 3.3vw;
   aspect-ratio: 1/1;
   border-radius: 500px;
   position: absolute;

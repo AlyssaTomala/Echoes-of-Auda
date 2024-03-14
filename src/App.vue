@@ -3,13 +3,14 @@
   <borderElement />
   <loaderSection />
   <headerSection />
-
+  <horizontalIntroduction />
+  <transitionAuda />
   <backgroundHeader />
   <testSection />
   <backgroundIntroduction />
-  <horizontalIntroduction />
+
   <introdctionSection />
-  <transitionAuda />
+
   <audaSection />
   <cardsAuda />
   <outfitAuda />
@@ -80,6 +81,6 @@ body {
 }
 
 /* * {
-  overflow-x: hidden;
+  overflow-x: visible;
 } */
 </style>
