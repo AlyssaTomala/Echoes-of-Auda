@@ -1,5 +1,5 @@
 <template>
-  <div class="loader" v-if="showLoader" ref="loader">
+  <div class="loader" v-if="showLoader" ref="loaderContainer">
     <div id="loader-title" ref="loaderTitle">
       <div class="decoration-sparkle-container">
         <div id="decorationSparkle" class="sparkle-one">
@@ -85,7 +85,7 @@
         </div>
       </div>
       <h1>
-        <animationTitle texte="Origins of the Monumental Realm" />
+        <animationTitle titleText="Origins of the Monumental Realm" />
       </h1>
     </div>
   </div>
@@ -93,7 +93,7 @@
 
 <script>
 import { gsap } from "gsap";
-import animationTitle from "./00animationTitle.vue";
+import animationTitle from "./animationTitle.vue";
 
 export default {
   data() {
@@ -161,7 +161,7 @@ export default {
         },
       });
 
-      tl.from(this.$refs.loader, {
+      tl.from(this.$refs.loaderContainer, {
         duration: 0.4,
       })
         .from(this.$refs.loaderTitle, {
@@ -171,7 +171,7 @@ export default {
           opacity: 0,
           ease: "power4.out",
         })
-        .to(this.$refs.loader, {
+        .to(this.$refs.loaderContainer, {
           backgroundColor: "#909b8d",
           opacity: 0,
           // duration: Infinity,
@@ -255,3 +255,4 @@ export default {
   text-shadow: 0.2rem 0.2rem 4rem rgba(0, 0, 0, 0.2);
 }
 </style>
+./animationTitle.vue

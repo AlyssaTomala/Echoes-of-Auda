@@ -2,21 +2,21 @@
   <div class="header-section" ref="header">
     <div ref="titleHeader">
       <h2 ref="h2Title">
-        <animationTitle v-if="showAnimationTitle" texte="Echoes of Auda" />
+        <animationTitle v-if="showAnimationTitle" titleText="Echoes of Auda" />
       </h2>
       <h1>Origins of the Monumental Realm</h1>
     </div>
-    <orbHeaderButton @hide-header="hideHeader" />
-    <div class="date-texte">
-      <p>Coming in Spring 2024 on PC and Nintento Switch</p>
+    <buttonOrb @hide-header="hideHeader" />
+    <div class="date-text">
+      <p>Coming in Spring 2024 on PC and Nintendo Switch</p>
     </div>
   </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
-import orbHeaderButton from "./02orbHeaderButton.vue";
-import animationTitle from "./00animationTitle.vue";
+import buttonOrb from "./buttonOrb.vue";
+import animationTitle from "./animationTitle.vue";
 
 export default {
   data() {
@@ -29,7 +29,7 @@ export default {
     setTimeout(() => {
       this.showAnimationTitle = true;
     }, 2800);
-    gsap.to(".date-texte", {
+    gsap.to(".date-text", {
       duration: 1,
       delay: 4,
       opacity: 1,
@@ -39,7 +39,7 @@ export default {
 
   components: {
     animationTitle,
-    orbHeaderButton,
+    buttonOrb,
   },
   methods: {
     disableScroll() {
@@ -60,6 +60,7 @@ export default {
         onComplete: () => {
           this.$refs.header.style.display = "none";
           this.enableScrollX();
+          this.showTexte01 = true;
         },
       });
     },
@@ -102,7 +103,7 @@ h2 {
   font-size: 40px;
 }
 
-.date-texte {
+.date-text {
   font-family: "Wigrum";
   font-size: 25px;
   letter-spacing: 2px;
@@ -112,3 +113,4 @@ h2 {
   opacity: 0;
 }
 </style>
+./animationTitle.vue

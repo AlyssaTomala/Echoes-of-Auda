@@ -1,70 +1,25 @@
 <template>
-  <animationTitle />
-  <borderElement />
+  <frameElement />
   <loaderSection />
   <headerSection />
-  <horizontalIntroduction />
-  <!-- <audaSection /> -->
-  <!-- <transitionAuda /> -->
-
-  <backgroundHeader />
-  <testSection />
-  <backgroundIntroduction />
-
-  <introdctionSection />
-
-  <outfitAuda />
-  <transitionWorld />
-  <backgroundWingedWorld />
-  <worldSection />
-  <transitionBackgroundWorld />
-  <secondWorldSection />
-  <backgroundNatureWorld />
+  <dlcSection />
+  <audaSection />
 </template>
 
 <script>
-import animationTitle from "./components/00animationTitle.vue";
-import borderElement from "./components/00borderElement.vue";
+import frameElement from "./components/frameElement.vue";
 import loaderSection from "./components/01loaderSection.vue";
-import backgroundHeader from "./components/02backgroundHeader.vue";
 import headerSection from "./components/02headerSection.vue";
-import backgroundIntroduction from "./components/03backgroundIntroduction.vue";
-import horizontalIntroduction from "./components/03horizontalIntroduction.vue";
-import introdctionSection from "./components/03introductionSection.vue";
-// import transitionAuda from "./components/04transitionAuda.vue";
-// import audaSection from "./components/05audaSection.vue";
-
-import outfitAuda from "./components/05outfitAuda.vue";
-import transitionWorld from "./components/06transitionWorld.vue";
-import backgroundWingedWorld from "./components/07backgroundWingedWorld.vue";
-import worldSection from "./components/07worldSection.vue";
-import transitionBackgroundWorld from "./components/08transitionBackgroundWorld.vue";
-import secondWorldSection from "./components/09secondWorldSection.vue";
-import backgroundNatureWorld from "./components/09backgroundNatureWorld.vue";
-import testSection from "./components/00testSection.vue";
+import dlcSection from "./components/03dlcSection.vue";
+import audaSection from "./components/04audaSection.vue";
 
 export default {
   components: {
-    animationTitle,
-    borderElement,
-    testSection,
+    frameElement,
     loaderSection,
-    backgroundHeader,
     headerSection,
-
-    backgroundIntroduction,
-    horizontalIntroduction,
-    introdctionSection,
-    // transitionAuda,
-    // audaSection,
-
-    outfitAuda,
-    transitionWorld,
-    backgroundWingedWorld,
-    worldSection,
-    transitionBackgroundWorld,
-    secondWorldSection,
-    backgroundNatureWorld,
+    dlcSection,
+    audaSection,
   },
 };
 </script>
@@ -77,6 +32,7 @@ export default {
 }
 
 body {
+  font-family: "Wigrum", sans-serif;
   margin: 0px;
 }
 
@@ -84,3 +40,4 @@ body {
   overflow-x: visible;
 } */
 </style>
+./components/frameElement.vue
