@@ -1,6 +1,6 @@
 <template>
-  <div class="cadre-container">
-    <div class="cadre"></div>
+  <div class="frame-container">
+    <div class="frame"></div>
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import { gsap } from "gsap";
 
 export default {
   mounted() {
-    gsap.to(".cadre", {
+    gsap.to(".frame", {
       opacity: 0.8,
       duration: 0.5,
       delay: 1.2,
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style scoped>
-.cadre-container {
+.frame-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -30,7 +30,7 @@ export default {
   color: wheat;
   pointer-events: none;
 }
-.cadre {
+.frame {
   width: 98%;
   height: 96%;
   border-radius: 10px;

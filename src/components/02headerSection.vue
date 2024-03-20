@@ -1,4 +1,10 @@
 <template>
+  <div class="video-background">
+    <video ref="videoHeader" autoplay loop muted playsinline>
+      <source src="../assets/imgs/yeh.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas la balise vidéo.
+    </video>
+  </div>
   <div class="header-section" ref="header">
     <div ref="titleHeader">
       <h2 ref="h2Title">
@@ -52,15 +58,27 @@ export default {
       document.body.style.overflowY = "visible";
     },
 
-    hideHeader() {
-      gsap.to(this.$refs.header, {
+    opacityVideo() {
+      gsap.to(this.$refs.videoHeader, {
         duration: 1,
         opacity: 0,
         ease: "power1.inOut",
         onComplete: () => {
-          this.$refs.header.style.display = "none";
+          this.$refs.videoHeader.style.display = "none";
+
           this.enableScrollX();
           this.showTexte01 = true;
+        },
+      });
+    },
+
+    hideHeader() {
+      gsap.to(this.$refs.header, {
+        duration: 0.5,
+        opacity: 0,
+        ease: "power1.inOut",
+        onComplete: () => {
+          this.opacityVideo();
         },
       });
     },
@@ -69,8 +87,21 @@ export default {
 </script>
 
 <style scoped>
+.video-background {
+  position: fixed; /* ou 'absolute' selon le besoin */
+  width: 100vw;
+  height: 100vh;
+  z-index: 10; /* Assurez-vous qu'elle est derrière d'autres éléments */
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100vw;
+  top: 0;
+}
+
 .header-section {
-  background-color: rgb(51, 66, 49);
+  background-color: rgb(51, 66, 49, 0);
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -81,7 +112,7 @@ export default {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 950;
+  z-index: 80;
 }
 
 .header-section h1,
@@ -92,10 +123,10 @@ h2 {
   letter-spacing: 2px;
   color: rgb(253, 243, 243);
   text-align: center;
-  text-shadow: 0.2rem 0.2rem 4rem rgba(0, 0, 0, 0.2);
   position: relative;
   bottom: 19.8vh;
   opacity: 1;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.44);
 }
 
 h2 {
@@ -106,11 +137,13 @@ h2 {
 .date-text {
   font-family: "Wigrum";
   font-size: 25px;
+  font-weight: 300;
   letter-spacing: 2px;
   color: rgb(253, 243, 243);
   position: relative;
   top: 30vh;
   opacity: 0;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
 }
 </style>
 ./animationTitle.vue

@@ -255,4 +255,3 @@ export default {
   text-shadow: 0.2rem 0.2rem 4rem rgba(0, 0, 0, 0.2);
 }
 </style>
-./animationTitle.vue
