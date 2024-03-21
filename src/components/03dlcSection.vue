@@ -1,11 +1,11 @@
 <template>
+  <frameElement />
   <div class="section-container">
     <div class="section-introduction">
       <div class="panel section-first-step">
         <div class="text-container-first-step">
           <p class="step-text first-step-text-01">
             <animationTitle
-              v-if="showText01"
               class="first-step-title"
               titleText="An adventure DLC"
             />
@@ -144,20 +144,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import animationTitle from "./animationTitle.vue";
-// import cardsAuda from "./05cardsAuda.vue";
-// import lolAtt from "./lolAtt.vue";
-
+import frameElement from "./frameElement.vue";
 export default {
-  data() {
-    return {
-      showText01: false,
-    };
-  },
-
   components: {
     animationTitle,
-    // cardsAuda,
-    // lolAtt,
+    frameElement,
   },
 
   mounted() {
@@ -165,16 +156,6 @@ export default {
     this.section2bAnimation();
     this.textApparition();
     this.animateTexteApparition();
-
-    ScrollTrigger.create({
-      trigger: ".section-first-step",
-      start: "center center",
-
-      duration: 1.5,
-      onEnter: () => {
-        this.showText01 = true;
-      },
-    });
 
     gsap.to(".section-introduction", {
       x: "-325vw",
@@ -279,6 +260,22 @@ export default {
 <style scoped>
 .section-container {
   height: 100vh;
+
+  background: linear-gradient(102deg, #ffffff, #fff9d7);
+  background-size: 120% 120%;
+  animation: gradient-animation 2s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .section-container {
@@ -318,8 +315,6 @@ export default {
 .first-step-title {
   color: #766848;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .first-step-text-02 {
@@ -338,7 +333,6 @@ export default {
   0% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(20%);
   }
@@ -438,7 +432,7 @@ export default {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .section-third-step {
@@ -446,7 +440,7 @@ export default {
   background-position: center left;
   background-size: 104%;
   background-repeat: no-repeat;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0);
 }
 
 .section-third-step p {
@@ -467,7 +461,7 @@ export default {
   width: 100vw;
 
   z-index: 10;
-
+  pointer-events: none;
   display: flex;
   align-items: center;
   justify-content: center;

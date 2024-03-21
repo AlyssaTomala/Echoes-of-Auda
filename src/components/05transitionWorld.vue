@@ -1,9 +1,9 @@
 <template>
   <div class="world-sections-container">
     <div class="world-first-section-container">
-      <worldTransition />
+      <worldTransition :startAnimation="startWorldTransition" />
     </div>
-    <p class="world-text">Titre</p>
+    <p class="world-text">Discovering the origins</p>
 
     <div class="world-second-section-container" ref="lol">
       <worldFooter />
@@ -35,7 +35,7 @@ export default {
         trigger: ".world-second-section-container",
         start: "-36% bottom",
         end: "-36% bottom",
-        markers: true,
+        // markers: true,
         duration: 1,
         onEnter: () => this.disableScroll(),
       });
@@ -43,33 +43,41 @@ export default {
   },
 
   mounted() {
-    this.enableScrollY();
-
     // this.ScrollStopOnSecondSection();
-    // this.worldTextTransition();
     gsap.registerPlugin(ScrollTrigger);
     gsap.from(".world-first-section-container", {});
+
+    gsap.from(".world-second-section-container", {
+      autoAlpha: 0,
+    });
+
+    gsap.to(".auda-presentation", {
+      scrollTrigger: {
+        trigger: ".auda-presentation",
+        start: "1% top",
+        end: "3% 100%",
+        scrub: 3,
+      },
+
+      autoAlpha: 0,
+      zIndex: "-5",
+    });
 
     gsap.to(".world-sections-container", {
       scrollTrigger: {
         trigger: ".auda-presentation",
-        start: "10% top",
-        end: "68.8 bottom",
-        scrub: 2,
-
+        start: "1% top",
+        end: "20% bottom",
+        scrub: 3,
         // markers: true,
-        onEnter: () => {
-          this.disableScroll();
-          // this.worldTextTransition();
-          setTimeout(() => {
-            this.enableScrollY();
-          }, 3000);
+        onComplete() {
+          this.enableScrollY();
         },
       },
       opacity: 1,
+      autoAlpha: 1,
       zIndex: 333333,
-      y: "-110vh",
-      duration: 3,
+      y: "-120vh",
 
       ease: "circ.out",
     });
@@ -117,13 +125,13 @@ export default {
     });
 
     gsap.from(".world-text", {
-      opacity: 0,
+      opacity: 1,
     });
 
     gsap.to(".world-text", {
-      color: "green",
+      color: "#766848",
       opacity: 1,
-      y: -360,
+      y: -420,
       scrollTrigger: {
         trigger: ".world-second-section-container",
         start: "-90% bottom",
@@ -131,28 +139,16 @@ export default {
         scrub: 1,
       },
     });
-
-    // gsap.to(".world-text", {
-    //   transformOrigin: "center center",
-
-    //   scrollTrigger: {
-    //     trigger: ".world-text",
-    //     start: "-280% bottom",
-    //     end: "-250% 90%",
-    //     scrub: 1,
-    //     markers: true,
-    //   },
-    // });
   },
 };
 </script>
 <style scoped>
 .world-sections-container {
-  opacity: 0.2;
+  opacity: 0;
   height: 100%;
   top: 130vh;
   position: relative;
-  background-color: rgb(212, 212, 212);
+  background-color: rgb(255, 255, 255);
 }
 
 .world-first-section-container {
@@ -167,17 +163,18 @@ export default {
   height: 100vh;
   scale: 0.95;
   overflow: hidden;
+  padding-bottom: 20vh;
   border-radius: 20px;
-  background-color: rgba(1, 111, 1, 1);
+  background-color: rgba(1, 111, 1, 0);
 }
 
 p {
-  opacity: 0.5;
-
+  opacity: 1;
   font-family: "wigrum";
   font-size: 50px;
   text-align: center;
-  padding: 6vh 0;
-  color: blue;
+  position: relative;
+  padding-bottom: 6vh 0;
+  color: #766848;
 }
 </style>

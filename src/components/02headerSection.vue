@@ -23,7 +23,6 @@
 import { gsap } from "gsap";
 import buttonOrb from "./buttonOrb.vue";
 import animationTitle from "./animationTitle.vue";
-
 export default {
   data() {
     return {
@@ -35,6 +34,7 @@ export default {
     setTimeout(() => {
       this.showAnimationTitle = true;
     }, 2800);
+
     gsap.to(".date-text", {
       duration: 1,
       delay: 4,
@@ -59,15 +59,20 @@ export default {
     },
 
     opacityVideo() {
+      gsap.to(".video-background", {
+        duration: 1,
+        opacity: 0,
+        autoAlpha: 0,
+        ease: "power1.inOut",
+      });
       gsap.to(this.$refs.videoHeader, {
         duration: 1,
         opacity: 0,
+        autoAlpha: 0,
         ease: "power1.inOut",
         onComplete: () => {
           this.$refs.videoHeader.style.display = "none";
-
           this.enableScrollX();
-          this.showTexte01 = true;
         },
       });
     },
@@ -76,6 +81,7 @@ export default {
       gsap.to(this.$refs.header, {
         duration: 0.5,
         opacity: 0,
+        autoAlpha: 0,
         ease: "power1.inOut",
         onComplete: () => {
           this.opacityVideo();
@@ -112,7 +118,7 @@ export default {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 80;
+  z-index: 8222220;
 }
 
 .header-section h1,
@@ -146,4 +152,3 @@ h2 {
   text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
 }
 </style>
-./animationTitle.vue

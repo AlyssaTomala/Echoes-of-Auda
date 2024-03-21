@@ -107,16 +107,17 @@ export default {
 }
 
 .orb-star {
-  transform: scale(1.1);
   transition: transform 0.5s ease;
+  width: 4vw;
+  position: absolute;
+  z-index: 2;
 }
 
-#buttonOrb:hover .orb-star {
-  transform: scale(1.25);
+#buttonOrb:hover + .orb-star {
+  transform: scale(1.18) rotate(90deg);
 }
 
 .button-border {
-  width: 4.8vw;
   z-index: 950;
   position: relative;
 
@@ -185,11 +186,5 @@ export default {
   border: 4px solid rgb(255, 255, 255);
   filter: blur(8px);
   animation: backgroundAura 2s ease-in-out infinite;
-}
-
-.orb-star {
-  position: absolute;
-  z-index: 2;
-  scale: 0.85;
 }
 </style>

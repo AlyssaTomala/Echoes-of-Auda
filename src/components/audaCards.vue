@@ -42,11 +42,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default {
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-
-    this.cardsAnimation();
-    // this.onHoverEnd();
-    // this.onHoverStart();
-
     this.onHoverEndJumping();
     this.onHoverStartJumping();
     this.onHoverEndHanging();
@@ -59,8 +54,8 @@ export default {
     onHoverStartJumping(selector) {
       gsap.to(selector, {
         transformOrigin: "center center",
-        width: "90vw",
-        scaleY: 1.05,
+        width: "21vw",
+
         duration: 0.5,
         opacity: 1,
         ease: "power2.inOut",
@@ -89,10 +84,9 @@ export default {
     onHoverStartHanging(selector) {
       gsap.to(selector, {
         transformOrigin: "center right",
-        width: "90vw",
+        width: "21vw",
         duration: 0.5,
 
-        scaleY: 1.05,
         ease: "power2.inOut",
       });
 
@@ -120,9 +114,9 @@ export default {
     onHoverStartSmiling(selector) {
       gsap.to(selector, {
         transformOrigin: "center left",
-        width: "90vw",
+        width: "21vw",
         duration: 0.5,
-        scaleY: 1.05,
+
         ease: "power2.inOut",
       });
 
@@ -144,42 +138,6 @@ export default {
         transformOrigin: "center center",
         opacity: 1,
         scale: 1,
-      });
-    },
-
-    cardsAnimation() {
-      const cards = [
-        { selector: ".card-smiling", delay: "1" },
-        { selector: ".card-jumping", delay: "1.2" },
-        { selector: ".card-hanging", delay: "1.5" },
-      ];
-
-      cards.forEach((card) => {
-        gsap.fromTo(
-          card.selector,
-          {
-            y: "50vh",
-          },
-          {
-            background:
-              "radial-gradient(111.45% 111.45% at 50% 32.22%, #8F917D 0%, #909B8D 100%)",
-            transformOrigin: "center bottom",
-            transform: "scaleX(1)",
-            opacity: 2,
-            y: 0,
-            duration: 2,
-            delay: card.delay,
-            ease: "elastic.out(0.3,0.4)",
-            scrollTrigger: {
-              trigger: ".cards-container",
-              start: "top 70%",
-              end: "30% bottom",
-              once: true,
-              markers: true,
-              scrub: 1,
-            },
-          }
-        );
       });
     },
   },
@@ -211,6 +169,14 @@ export default {
   border-radius: 5px;
   margin: 1%;
 
+  background: linear-gradient(
+    267deg,
+    rgba(209, 211, 188, 0.8) -95.46%,
+    rgba(144, 155, 141, 0.8) 133.85%
+  );
+  border: 3px rgb(254, 255, 231) solid;
+
+  backdrop-filter: blur(2px);
   z-index: 100;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
@@ -219,27 +185,33 @@ export default {
   cursor: pointer;
   position: relative;
   z-index: 2222;
+  transition: background 1s ease-in-out;
+  background: linear-gradient(
+    267deg,
+    rgba(209, 211, 188, 1) -95.46%,
+    rgba(144, 155, 141, 1) 133.85%
+  );
 }
 
 .auda-img {
   position: absolute;
-
+  pointer-events: none;
   object-fit: cover;
 }
 
 .card-smiling img {
-  width: 32vw;
+  width: 28vw;
   left: -5vw;
 }
 
 .card-jumping img {
   width: 30vw;
-  bottom: 2vh;
+  top: -18vh;
 }
 
 .card-hanging img {
   width: 25vw;
-  top: 3vh;
+  top: -3vh;
   right: 0;
 }
 </style>

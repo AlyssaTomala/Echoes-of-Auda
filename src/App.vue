@@ -66,4 +66,3 @@ body {
   overflow-x: visible;
 } */
 </style>
-./components/05transitionWorld.vue

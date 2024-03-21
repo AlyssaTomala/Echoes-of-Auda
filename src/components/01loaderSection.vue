@@ -237,7 +237,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 10222200;
   opacity: 1;
 }
 
