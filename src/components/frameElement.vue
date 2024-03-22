@@ -35,6 +35,6 @@ export default {
   height: 96%;
   border-radius: 10px;
   border: 2px solid rgb(255, 240, 240);
-  opacity: 0; /* Définissez l'opacité initiale à 0 pour cacher l'élément */
+  opacity: 0;
 }
 </style>

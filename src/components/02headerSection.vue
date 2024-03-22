@@ -97,10 +97,10 @@ export default {
 
 <style scoped>
 .video-background {
-  position: fixed; /* ou 'absolute' selon le besoin */
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 10; /* Assurez-vous qu'elle est derrière d'autres éléments */
+  z-index: 10;
   overflow: hidden;
 }
 

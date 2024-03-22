@@ -134,7 +134,6 @@ export default {
         .to(this.$refs.loaderContainer, {
           backgroundColor: "#909b8d",
           opacity: 0,
-          // duration: Infinity,
           duration: 2,
           delay: 0.5,
           ease: "power4.out",

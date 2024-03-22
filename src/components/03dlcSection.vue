@@ -90,20 +90,22 @@
           </div>
           <div class="second-step-text-02">
             <p>
-              In search of the origins of <br />
-              Orbon, Auda's companion
+              Growing through<br />
+              exploration
             </p>
           </div>
           <div class="second-step-text-03">
             <p>
-              The two protagonists <br />
-              grow trough exploration
+              Unraveling Orbon's Origins, <br />
+              Auda's Companion
             </p>
           </div>
         </div>
       </div>
       <div class="panel section-third-step">
-        <p class="step-text third-step-text-01">Auda has changed !</p>
+        <p class="step-text third-step-text-01">
+          However, the DLC has more to reveal...
+        </p>
       </div>
     </div>
     <div class="section-transition">
@@ -444,6 +446,7 @@ export default {
 
 .section-third-step p {
   color: #766848;
+  text-align: center;
 }
 
 .panel {
@@ -483,12 +486,4 @@ export default {
   width: 100%;
   height: 100%;
 }
-
-/* .section-trigger-container {
-  width: 100vw;
-  height: 20vh;
-  z-index: 900;
-  background: rgba(114, 42, 42, 0.207);
-  position: absolute;
-} */
 </style>

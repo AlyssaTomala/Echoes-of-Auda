@@ -2,7 +2,7 @@
   <div class="fond">
     <div class="transition-container">
       <div class="world-texte-transition" ref="worldText">
-        A giant world awaits
+        Step into a world of wonders
       </div>
       <div class="transition-img">
         <svg
@@ -101,7 +101,7 @@
       </svg>
     </div>
     <div class="bottom-text">
-      An immense world, where <br />only winged beings can survive.
+      An immense realm, where <br />only winged beings can survive.
     </div>
   </div>
 </template>

@@ -13,7 +13,7 @@
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { SplitText } from "gsap/SplitText";
+
 import worldTransition from "./worldTransition.vue";
 import worldFooter from "./worldFooter.vue";
 
