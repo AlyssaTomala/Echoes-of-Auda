@@ -3,31 +3,11 @@
     <div id="loader-title" ref="loaderTitle">
       <div class="decoration-sparkle-container">
         <div id="decorationSparkle" class="sparkle-one">
-          <svg
-            width="47"
-            height="47"
-            viewBox="0 0 47 47"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-              fill="url(#paint0_angular_67_514)"
-            />
-            <defs>
-              <radialGradient
-                id="paint0_angular_67_514"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-              >
-                <stop stop-color="#F5F0D5" />
-                <stop offset="1" stop-color="white" />
-              </radialGradient>
-            </defs>
-          </svg>
+          <img
+            class="img-card-star"
+            :src="require('@/assets/imgs/img-card-star.svg')"
+            alt="sparkle"
+          />
         </div>
         <div id="decorationSparkle" class="sparkle-two">
           <svg
@@ -57,31 +37,11 @@
           </svg>
         </div>
         <div id="decoration-sparkle" class="sparkle-three">
-          <svg
-            width="47"
-            height="47"
-            viewBox="0 0 47 47"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-              fill="url(#paint0_angular_67_514)"
-            />
-            <defs>
-              <radialGradient
-                id="paint0_angular_67_514"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-              >
-                <stop stop-color="#F5F0D5" />
-                <stop offset="1" stop-color="white" />
-              </radialGradient>
-            </defs>
-          </svg>
+          <img
+            class="img-card-star"
+            :src="require('@/assets/imgs/img-card-star.svg')"
+            alt="sparkle"
+          />
         </div>
       </div>
       <h1>
@@ -127,7 +87,7 @@ export default {
 
     gsap.from(".sparkle-three", {
       duration: 0.8,
-      delay: 0.6,
+      delay: 0.8,
       scale: 0,
       rotate: 30,
       opacity: 0,
@@ -203,6 +163,10 @@ export default {
   position: absolute;
 }
 
+.img-card-star {
+  width: 4vh;
+}
+
 .sparkle-one {
   top: 18vh;
   right: 80%;
@@ -217,9 +181,9 @@ export default {
 
 .sparkle-three {
   position: absolute;
-  bottom: 2vh;
+  bottom: 3vh;
   left: 85%;
-  scale: 1.2;
+  scale: 1.6;
 }
 
 .loader {

@@ -23,59 +23,47 @@ export default {
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
 
-    this.cardsAnimation();
-
-    gsap.to(".auda-section-container", {
-      scrollTrigger: {
-        trigger: ".section-container",
-        scrub: 2,
-        start: "100% bottom",
-        end: "bottom 99%",
-
-        onComplete: () => {
-          this.cardsAnimation();
-        },
-      },
-      pointerEvents: "all",
-      autoAlpha: 1,
-      opacity: 1,
-      zIndex: 2020202,
-      ease: "power2.inOut",
-    });
+    this.initCardsAnimation();
   },
 
   methods: {
-    cardsAnimation() {
-      gsap.to(".card", {
+    initCardsAnimation() {
+      gsap.timeline({
         scrollTrigger: {
-          trigger: ".section-container",
-          start: "top 50%",
+          trigger: ".auda-section-container",
+          start: "50% center",
+          once: true,
+          zIndex: 22222200,
           onEnter: () => {
-            const cards = [
-              { selector: ".card-smiling", delay: 0.25 },
-              { selector: ".card-jumping", delay: 0.5 },
-              { selector: ".card-hanging", delay: 0.75 },
-            ];
-
-            cards.forEach((card) => {
-              gsap.fromTo(
-                card.selector,
-                {
-                  y: "50vh",
-                },
-                {
-                  transformOrigin: "center bottom",
-                  transform: "scaleX(1)",
-                  opacity: 1,
-                  y: 0,
-                  duration: 1.75,
-                  delay: card.delay,
-                  ease: "power2.inOut",
-                }
-              );
+            gsap.to(".auda-section-container", {
+              autoAlpha: 1,
+              opacity: 1,
+              onComplete: () => this.animateCards(),
             });
           },
         },
+      });
+    },
+
+    animateCards() {
+      const cards = gsap.utils.toArray(".auda-cards");
+
+      cards.forEach((card, index) => {
+        gsap.fromTo(
+          card,
+          {
+            autoAlpha: 0,
+            y: 250,
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+
+            delay: index * 0.25,
+            duration: 1.5,
+            ease: "elastic.out(0.6,0.5)",
+          }
+        );
       });
     },
   },
@@ -93,7 +81,6 @@ export default {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  pointer-events: none;
 }
 
 .auda-card-container {
@@ -113,37 +100,8 @@ export default {
   height: 120vh;
   position: absolute;
   bottom: -30vh;
-  z-index: -3;
+  opacity: 1;
+  z-index: 10;
   background-color: #fbf9ec;
 }
-
-/* .auda-presentation {
-  width: 100vw;
-  height: 140vh;
-  background-color: #385135;
-  position: relative;
-  z-index: 902;
-  top: 18vh;
-  opacity: 1;
-  padding-top: 40px;
-  justify-content: center;
-  align-items: center;
-} */
-/* .carre {
-  width: 100vw;
-  height: 40vh;
-  opacity: 0.2;
-  background-color: green;
-  position: relative;
-
-  pointer-events: none;
-}
-.yep {
-  width: 20vw;
-  height: 30px;
-  position: relative;
-
-  opacity: 1;
-  background-color: red;
-} */
 </style>

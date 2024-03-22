@@ -1,151 +1,51 @@
 <template>
   <div class="cards-container">
-    <div
-      class="card card-smiling"
-      @mouseenter="onHoverStartSmiling('.card-smiling')"
-      @mouseleave="onHoverEndSmiling('.card-smiling')"
-    >
+    <div class="auda-cards">
       <img
-        class="auda-img auda-img-smiling"
-        src="../assets/imgs/Audaone.png"
+        class="card-img-star card-img-star-first"
+        :src="require('@/assets/imgs/img-card-star.svg')"
+        alt="auda"
+      />
+      <div class="card-border">
+        <div class="card card-smiling"></div>
+      </div>
+      <img
+        class="card-img-star card-img-star-second"
+        :src="require('@/assets/imgs/img-card-star.svg')"
         alt="auda"
       />
     </div>
-    <div
-      class="card card-jumping"
-      @mouseenter="onHoverStartJumping('.card-jumping')"
-      @mouseleave="onHoverEndJumping('.card-jumping')"
-    >
+    <div class="auda-cards">
       <img
-        class="auda-img auda-img-jumping"
-        src="../assets/imgs/audajumping.png"
+        class="card-img-star card-img-star-first"
+        :src="require('@/assets/imgs/img-card-star.svg')"
+        alt="auda"
+      />
+      <div class="card-border">
+        <div class="card card-jumping"></div>
+      </div>
+      <img
+        class="card-img-star card-img-star-second"
+        :src="require('@/assets/imgs/img-card-star.svg')"
         alt="auda"
       />
     </div>
-    <div
-      class="card card-hanging"
-      @mouseenter="onHoverStartHanging('.card-hanging')"
-      @mouseleave="onHoverEndHanging('.card-hanging')"
-    >
+    <div class="auda-cards">
       <img
-        class="auda-img auda-img-hanging"
-        src="../assets/imgs/audatrhee.png"
+        class="card-img-star card-img-star-first"
+        :src="require('@/assets/imgs/img-card-star.svg')"
         alt="auda"
       />
+      <div class="card-border">
+        <div class="card card-hanging"></div>
+      </div>
     </div>
   </div>
 </template>
-<script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-export default {
-  mounted() {
-    gsap.registerPlugin(ScrollTrigger);
-    this.onHoverEndJumping();
-    this.onHoverStartJumping();
-    this.onHoverEndHanging();
-    this.onHoverStartHanging();
-    this.onHoverEndSmiling();
-    this.onHoverStartSmiling();
-  },
-
-  methods: {
-    onHoverStartJumping(selector) {
-      gsap.to(selector, {
-        transformOrigin: "center center",
-        width: "21vw",
-
-        duration: 0.5,
-        opacity: 1,
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".card-smiling, .card-hanging", {
-        transformOrigin: "center center",
-        opacity: 0.5,
-        scale: 0.9,
-      });
-    },
-
-    onHoverEndJumping(selector) {
-      gsap.to(selector, {
-        scale: 1,
-        width: "20vw",
-        ease: "power2.inOut",
-      });
-      gsap.to(".card-smiling, .card-hanging", {
-        transformOrigin: "center center",
-        opacity: 1,
-        scale: 1,
-      });
-    },
-
-    onHoverStartHanging(selector) {
-      gsap.to(selector, {
-        transformOrigin: "center right",
-        width: "21vw",
-        duration: 0.5,
-
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".card-smiling, .card-jumping", {
-        transformOrigin: "center center",
-        opacity: 0.5,
-        scale: 0.9,
-      });
-    },
-
-    onHoverEndHanging(selector) {
-      gsap.to(selector, {
-        scale: 1,
-        width: "20vw",
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".card-smiling, .card-jumping", {
-        transformOrigin: "center center",
-        opacity: 1,
-        scale: 1,
-      });
-    },
-
-    onHoverStartSmiling(selector) {
-      gsap.to(selector, {
-        transformOrigin: "center left",
-        width: "21vw",
-        duration: 0.5,
-
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".card-hanging, .card-jumping", {
-        transformOrigin: "center center",
-        opacity: 0.5,
-        scale: 0.9,
-      });
-    },
-
-    onHoverEndSmiling(selector) {
-      gsap.to(selector, {
-        scale: 1,
-        width: "20vw",
-        ease: "power2.inOut",
-      });
-
-      gsap.to(".card-hanging, .card-jumping", {
-        transformOrigin: "center center",
-        opacity: 1,
-        scale: 1,
-      });
-    },
-  },
-};
-</script>
-<style scoped>
+<script></script>
+<style>
 .cards-container {
-  width: 80vw;
+  width: 90vw;
   height: 80vh;
   opacity: 1;
   display: flex;
@@ -154,64 +54,115 @@ export default {
   justify-content: space-evenly;
   position: relative;
   opacity: 1;
+  background-color: rgb(102, 102, 114, 0);
+}
+
+.auda-cards {
+  overflow: visible;
+  width: 22vw;
+  height: 70vh;
+  margin: 0% 5%;
+  opacity: 0;
+  position: relative;
+}
+
+.card-border {
+  width: 23vw;
+  height: 71.5vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(209, 211, 188, 1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position: relative;
+}
+
+.card-img-star {
+  position: absolute;
+  z-index: 100;
+  width: 80px;
+  height: 80px;
+}
+
+.card-img-star-first {
+  top: -6.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-img-star-second {
+  bottom: -9%;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .card {
-  opacity: 1;
-  transform: scale(0);
-  width: 20vw;
+  overflow: visible;
+  position: absolute;
+  width: 22vw;
   height: 70vh;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
   border-radius: 5px;
-  margin: 1%;
-
+  background-color: white;
   background: linear-gradient(
     267deg,
-    rgba(209, 211, 188, 0.8) -95.46%,
-    rgba(144, 155, 141, 0.8) 133.85%
+    rgba(209, 211, 188, 0.5) -95.46%,
+    rgba(144, 155, 141, 0.5) 133.85%
   );
-  border: 3px rgb(254, 255, 231) solid;
-
   backdrop-filter: blur(2px);
-  z-index: 100;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+
+  transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform-origin: center;
 }
 
 .card:hover {
-  cursor: pointer;
-  position: relative;
-  z-index: 2222;
-  transition: background 1s ease-in-out;
-  background: linear-gradient(
-    267deg,
-    rgba(209, 211, 188, 1) -95.46%,
-    rgba(144, 155, 141, 1) 133.85%
-  );
+  transform: scaleX(1.06) scaleY(1.03);
+  background-color: rgba(144, 155, 141, 0.5);
 }
 
-.auda-img {
+.card-smiling::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: -10%; /* Ajustez ces valeurs selon l'effet désiré */
+  left: -30%;
+  width: 95%; /* Permet à l'image de dépasser */
+  height: 120%;
+  background-image: url("../assets/imgs/img-card-auda-smiling.webp");
+  background-position: center left 1.5vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.card-jumping::after {
+  content: "";
   position: absolute;
   pointer-events: none;
-  object-fit: cover;
+  top: -10%; /* Ajustez ces valeurs selon l'effet désiré */
+  left: -25%;
+  width: 150%; /* Permet à l'image de dépasser */
+  height: 120%;
+  background-image: url("../assets/imgs/img-card-auda-jumping.webp");
+  background-position: center left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
-.card-smiling img {
-  width: 28vw;
-  left: -5vw;
-}
-
-.card-jumping img {
-  width: 30vw;
-  top: -18vh;
-}
-
-.card-hanging img {
-  width: 25vw;
-  top: -3vh;
+.card-hanging::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 9%; /* Ajustez ces valeurs selon l'effet désiré */
   right: 0;
+  width: 95%; /* Permet à l'image de dépasser */
+  height: 120%;
+  background-image: url("../assets/imgs/img-card-auda-hanging.webp");
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 </style>

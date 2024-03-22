@@ -1,7 +1,9 @@
 <template>
   <div class="fond">
     <div class="transition-container">
-      <div class="texte" ref="texte">A giant world awaits</div>
+      <div class="world-texte-transition" ref="worldText">
+        A giant world awaits
+      </div>
       <div class="transition-img">
         <svg
           class="transition-svg-star"
@@ -26,112 +28,6 @@
             >
               <stop stop-color="#828778" />
               <stop offset="1" stop-color="#919789" />
-            </radialGradient>
-          </defs>
-        </svg>
-      </div>
-      <div class="star">
-        <svg
-          class="text-transition-svg-star star-01"
-          width="47"
-          height="47"
-          viewBox="0 0 47 47"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-            fill="url(#paint0_angular_67_514)"
-          />
-          <defs>
-            <radialGradient
-              id="paint0_angular_67_514"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-            >
-              <stop stop-color="#F5F0D5" />
-              <stop offset="1" stop-color="white" />
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg
-          class="text-transition-svg-star star-02"
-          width="47"
-          height="47"
-          viewBox="0 0 47 47"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-            fill="url(#paint0_angular_67_514)"
-          />
-          <defs>
-            <radialGradient
-              id="paint0_angular_67_514"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-            >
-              <stop stop-color="#F5F0D5" />
-              <stop offset="1" stop-color="white" />
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg
-          class="text-transition-svg-star star-03"
-          width="47"
-          height="47"
-          viewBox="0 0 47 47"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-            fill="url(#paint0_angular_67_514)"
-          />
-          <defs>
-            <radialGradient
-              id="paint0_angular_67_514"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-            >
-              <stop stop-color="#F5F0D5" />
-              <stop offset="1" stop-color="white" />
-            </radialGradient>
-          </defs>
-        </svg>
-        <svg
-          class="text-transition-svg-star star-04"
-          width="47"
-          height="47"
-          viewBox="0 0 47 47"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-            fill="url(#paint0_angular_67_514)"
-          />
-          <defs>
-            <radialGradient
-              id="paint0_angular_67_514"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
-            >
-              <stop stop-color="#F5F0D5" />
-              <stop offset="1" stop-color="white" />
             </radialGradient>
           </defs>
         </svg>
@@ -204,226 +100,155 @@
         </defs>
       </svg>
     </div>
+    <div class="bottom-text">
+      An immense world, where <br />only winged beings can survive.
+    </div>
   </div>
 </template>
 
 <script>
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitText from "gsap/SplitText"; // Assurez-vous que SplitText est correctement importé
-
+import SplitText from "gsap/SplitText";
 export default {
   mounted() {
-    gsap.registerPlugin(ScrollTrigger, SplitText);
-    this.worldTextTransition();
-    // this.animateStars();
-    this.stopStars();
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(SplitText);
+    this.StarTransitionWorld();
+    this.animateText();
+    this.bottomTextAnimation();
   },
 
   methods: {
-    worldTextTransition() {
-      let mySplitText = new SplitText(this.$refs.texte, {
-        type: "chars, words",
-      });
-      let chars = mySplitText.chars; // Array des caractères divisés pour l'animation
+    StarTransitionWorld() {
+      gsap.to(".transition-svg-star", {
+        scrollTrigger: {
+          trigger: ".world-first-section-container",
+          start: "-10% bottom",
+          end: "10% 50%",
 
-      gsap.to(".transition-img", {
-        opacity: 0,
+          onEnter: () => {
+            this.animateText();
+          },
+        },
+        duration: 2.2,
+        delay: 1.2,
+        opacity: 1,
+        rotate: 180,
+        scale: 0,
+        ease: "power1.inOut",
+      });
+
+      gsap.to(".world-texte-transition", {
+        scrollTrigger: {
+          trigger: ".world-first-section-container",
+          start: "-10% bottom",
+          end: "10% 50%",
+        },
+        opacity: 1,
+        zIndex: 102200,
+        delay: 0.3,
         duration: 1.5,
-        delay: 5,
-        onComplete: () => {
-          this.stopStars();
-        },
       });
-
-      gsap.from(chars, {
-        opacity: 0,
-        duration: 1.2,
-        stagger: 0.06,
-        ease: "power1.out",
-        onEnter: () => {
-          // this.animateStars();
-        },
-      });
-    },
-
-    stopStars() {
-      // gsap.to(".text-transition-svg-star", {
-      //   duration: 1,
-      //   opacity: 0,
-      //   zIndex: 22222,
-      //   ease: "power4.inOut",
-      //   stagger: 0.3,
-      // });
 
       gsap.to(".scroll-down-svg", {
+        scrollTrigger: {
+          trigger: ".world-first-section-container",
+          start: "-10% bottom",
+          end: "10% 50%",
+        },
         opacity: 1,
+        delay: 2,
         duration: 0.8,
-        top: "-66vh",
+        top: "-60vh",
         zIndex: 222222,
+      });
+
+      gsap.to(".bottom-text", {
+        scrollTrigger: {
+          trigger: ".world-first-section-container",
+          start: "-10% bottom",
+
+          onEnter: () => {
+            this.bottomTextAnimation();
+          },
+        },
+
+        delay: 5,
+        opacity: 1,
       });
     },
 
-    // animateStars() {
-    //   gsap.to(".text-transition-svg-star", {
-    //     duration: 1,
-    //     opacity: 1,
-    //     zIndex: 22222,
-    //     ease: "power4.inOut",
-    //     stagger: 0.3,
-    //   });
+    animateText() {
+      let split = new SplitText(".world-texte-transition", { type: "chars" });
 
-    //   gsap.to(".transition-svg-star", {
-    //     duration: 1.5,
-    //     delay: 3,
-    //     opacity: 0.8,
-    //     scale: 0,
-    //     rotate: 95,
-    //     zIndex: 222222,
-    //     ease: "power4.inOut",
-    //   });
-    // },
+      gsap.from(split.chars, {
+        opacity: 0,
+        scale: 0,
+        y: -30,
+        rotationX: -180,
+        transformOrigin: "bottom -2",
+        stagger: 0.03,
+        ease: "back.out(0.1)",
+        duration: 1,
+      });
+    },
+
+    bottomTextAnimation() {
+      let split = new SplitText(".bottom-text", { type: "chars" });
+
+      gsap.from(split.chars, {
+        opacity: 0,
+        ease: "power2.out",
+        stagger: 0.03,
+        delay: 0.5,
+      });
+    },
   },
 };
 </script>
-
-<style scoped>
-.fond {
+<style>
+.world-texte-transition {
   opacity: 1;
-  width: 100vw;
-  height: 100%;
+  font-size: 3em;
+  color: #ffffea;
   position: relative;
-  z-index: -2;
-  background-image: url("../assets/imgs/grosArbre.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.transition-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: 30vh;
+  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.44);
+  text-align: center;
+  z-index: 1000;
 }
 
 .transition-img {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: relative;
-  z-index: 200;
-  background-color: "rgba(0, 0, 0, 0)";
-
-  animation: gradient-animation 15s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .transition-svg-star {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: -73vh;
   left: 0vw;
-  scale: 1;
-  scale: 3;
+  scale: 8;
+  top: -20vh;
   opacity: 1;
   transform: rotate(0deg);
   z-index: 1000;
 }
 
-.texte {
-  opacity: 1; /* Commencez invisible pour l'animation */
-  font-size: 3em;
-  color: #ffffea;
+.fond {
+  opacity: 1;
+  width: 100vw;
+  height: 100%;
   position: relative;
-  top: 20%;
-
-  text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.44);
-  text-align: center;
-  z-index: 1000;
-}
-
-.star-01 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -60vh;
-  right: 20vw;
-  scale: 0.04;
-  z-index: 1000;
-  animation: starsAnimation2 ease-in-out 2.5s infinite;
-}
-.star-02 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -80vh;
-  scale: 0.03;
-  right: -15vw;
-  animation: starsAnimation2 ease-in-out 2s infinite;
-  z-index: 1000;
-}
-.star-03 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -65vh;
-  animation: starsAnimation ease-in-out 2s infinite;
-  scale: 0.02;
-  right: -22vw;
-
-  z-index: 1000;
-}
-.star-04 {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: -85vh;
-  scale: 0.02;
-  right: 5vw;
-  z-index: 1000;
-  animation: starsAnimation ease-in-out 1.5s infinite;
-}
-
-.text-transition-svg-star {
-  opacity: 0;
-}
-
-@keyframes starsAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes starsAnimation2 {
-  0% {
-    transform: translateY(15vh);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(15vh);
-  }
+  z-index: -2;
+  background-image: url("../assets/imgs/img-world-tree.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom -22vh center;
 }
 
 .scroll-down-svg {
@@ -432,8 +257,31 @@ export default {
   z-index: 1000;
   opacity: 0;
   position: absolute;
-  animation: starsAnimation ease-in-out 1.5s infinite;
-  top: -67vh;
+  animation: downAnimation ease-in-out 1.5s infinite;
+  top: -70vh;
   scale: 0.02;
+}
+
+@keyframes downAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bottom-text {
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  top: 81vh;
+  opacity: 0;
 }
 </style>

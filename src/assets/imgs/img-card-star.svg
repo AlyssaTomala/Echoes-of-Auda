@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28.19 28.19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Dégradé_sans_nom_3);
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #fbf9ec;
+      }
+    </style>
+    <radialGradient id="Dégradé_sans_nom_3" data-name="Dégradé sans nom 3" cx="-285.52" cy="360.07" fx="-285.52" fy="360.07" r="1" gradientTransform="translate(5401.6 -4285.87) rotate(-90.18) scale(15 -15)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#606e35" stop-opacity=".63"/>
+      <stop offset="1" stop-color="#fbf9ec" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="Calque_1-2" data-name="Calque 1">
+    <g id="Group_7" data-name="Group 7">
+      <path id="Star_3" data-name="Star 3" class="cls-1" d="m13.63,27.87c.16.43.77.43.93,0l3.59-9.43c.05-.13.16-.24.29-.29l9.43-3.59c.43-.16.43-.77,0-.93l-9.43-3.59c-.13-.05-.24-.16-.29-.29L14.56.32c-.16-.43-.77-.43-.93,0l-3.59,9.43c-.05.13-.16.24-.29.29L.32,13.63c-.43.16-.43.77,0,.93l9.43,3.59c.13.05.24.16.29.29l3.59,9.43Z"/>
+      <g id="Star_2" data-name="Star 2">
+        <path class="cls-2" d="m14.73,6.33c-.15-.43-.76-.45-.93-.02l-2.04,5.04c-.05.13-.16.24-.3.28l-5.12,1.83c-.43.15-.45.76-.02.93l5.04,2.04c.13.05.24.16.28.3l1.83,5.12c.15.43.76.45.93.02l2.04-5.04c.05-.13.16-.24.3-.28l5.12-1.83c.43-.15.45-.76.02-.93l-5.04-2.04c-.13-.05-.24-.16-.28-.3l-1.83-5.12Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

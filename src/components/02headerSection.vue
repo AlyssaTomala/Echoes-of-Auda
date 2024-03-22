@@ -1,7 +1,10 @@
 <template>
   <div class="video-background">
     <video ref="videoHeader" autoplay loop muted playsinline>
-      <source src="../assets/imgs/yeh.mp4" type="video/mp4" />
+      <source
+        :src="require('@/assets/imgs/video-header.webm')"
+        type="video/webm"
+      />
       Votre navigateur ne supporte pas la balise vidéo.
     </video>
   </div>

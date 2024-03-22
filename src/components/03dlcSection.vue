@@ -1,5 +1,4 @@
 <template>
-  <frameElement />
   <div class="section-container">
     <div class="section-introduction">
       <div class="panel section-first-step">
@@ -15,15 +14,15 @@
         <div class="arrow-container-first-step">
           <svg
             class="arrow-first-step"
-            width="51"
-            height="57"
-            viewBox="0 0 51 57"
+            width="44"
+            height="58"
+            viewBox="0 0 44 58"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <g filter="url(#filter0_d_110_27)">
               <path
-                d="M9 9L41.4875 27.6325C42.1575 28.0168 42.1575 28.9832 41.4875 29.3675L9 48"
+                d="M9.5 9.5L34.4333 28.2C34.9667 28.6 34.9667 29.4 34.4333 29.8L9.5 48.5"
                 stroke="url(#paint0_linear_110_27)"
                 stroke-width="5"
                 stroke-linecap="round"
@@ -32,10 +31,10 @@
             <defs>
               <filter
                 id="filter0_d_110_27"
-                x="-0.000366211"
-                y="-0.000424117"
-                width="50.9904"
-                height="57.0008"
+                x="0.499878"
+                y="0.499853"
+                width="43.3335"
+                height="57.0003"
                 filterUnits="userSpaceOnUse"
                 color-interpolation-filters="sRGB"
               >
@@ -67,14 +66,14 @@
               </filter>
               <linearGradient
                 id="paint0_linear_110_27"
-                x1="61.1087"
-                y1="28.8679"
-                x2="-65"
-                y2="29"
+                x1="-35"
+                y1="29.5"
+                x2="87.5"
+                y2="29.5"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#97845A" />
-                <stop offset="1" stop-color="#6C6036" />
+                <stop stop-color="white" />
+                <stop offset="1" stop-color="#D1D3BC" />
               </linearGradient>
             </defs>
           </svg>
@@ -111,27 +110,27 @@
       <div class="section-transition-background"></div>
       <svg
         class="transition-star"
-        width="47"
-        height="47"
-        viewBox="0 0 47 47"
+        width="315"
+        height="315"
+        viewBox="0 0 315 315"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M23.9673 1.22714C23.8038 0.797709 23.1962 0.797711 23.0327 1.22714L17.0992 16.8098C17.0484 16.9431 16.9431 17.0484 16.8098 17.0992L1.22714 23.0327C0.79771 23.1962 0.79771 23.8038 1.22714 23.9673L16.8098 29.9008C16.9431 29.9516 17.0484 30.0569 17.0992 30.1902L23.0327 45.7729C23.1962 46.2023 23.8038 46.2023 23.9673 45.7729L29.9008 30.1902C29.9516 30.0569 30.0569 29.9516 30.1902 29.9008L45.7729 23.9673C46.2023 23.8038 46.2023 23.1962 45.7729 23.0327L30.1902 17.0992C30.0569 17.0484 29.9516 16.9431 29.9008 16.8098L23.9673 1.22714Z"
-          fill="url(#paint0_angular_67_514)"
+          d="M157.033 313.773C157.196 314.202 157.804 314.202 157.967 313.773L200.854 201.144C200.905 201.01 201.01 200.905 201.144 200.854L313.773 157.967C314.202 157.804 314.202 157.196 313.773 157.033L201.144 114.146C201.01 114.095 200.905 113.99 200.854 113.856L157.967 1.22717C157.804 0.797738 157.196 0.797739 157.033 1.22717L114.146 113.856C114.095 113.99 113.99 114.095 113.856 114.146L1.22717 157.033C0.797737 157.196 0.797738 157.804 1.22717 157.967L113.856 200.854C113.99 200.905 114.095 201.01 114.146 201.144L157.033 313.773Z"
+          fill="url(#paint0_radial_127_65)"
         />
         <defs>
           <radialGradient
-            id="paint0_angular_67_514"
+            id="paint0_radial_127_65"
             cx="0"
             cy="0"
             r="1"
             gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(23.5 23.5) rotate(90) scale(42.0151)"
+            gradientTransform="translate(157.5 157.5) rotate(-90.1819) scale(157.501 157.501)"
           >
-            <stop stop-color="#F5F0D5" />
-            <stop offset="1" stop-color="white" />
+            <stop stop-color="#606E35" stop-opacity="0.63" />
+            <stop offset="1" stop-color="#FBF9EC" stop-opacity="0" />
           </radialGradient>
         </defs>
       </svg>
@@ -144,11 +143,10 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import animationTitle from "./animationTitle.vue";
-import frameElement from "./frameElement.vue";
+
 export default {
   components: {
     animationTitle,
-    frameElement,
   },
 
   mounted() {
@@ -279,6 +277,7 @@ export default {
 }
 
 .section-container {
+  pointer-events: none;
   scroll-behavior: smooth;
 }
 
@@ -391,7 +390,7 @@ export default {
 }
 
 .section-first-step {
-  background-image: url("../assets/imgs/droite.PNG");
+  background-image: url("../assets/imgs/img-dlc-left.webp");
   background-position: center right;
   background-size: 104%;
   background-repeat: no-repeat;
@@ -428,7 +427,7 @@ export default {
   width: 225vw;
   position: relative;
   z-index: 6;
-  background-image: url("../assets/imgs/centre.PNG");
+  background-image: url("../assets/imgs/img-dlc-central.webp");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -436,9 +435,9 @@ export default {
 }
 
 .section-third-step {
-  background-image: url("../assets/imgs/gauche.PNG");
+  background-image: url("../assets/imgs/img-dlc-right.webp");
   background-position: center left;
-  background-size: 104%;
+  background-size: 94%;
   background-repeat: no-repeat;
   background-color: rgb(255, 255, 255, 0);
 }

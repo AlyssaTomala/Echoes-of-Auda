@@ -58,20 +58,28 @@
       </div>
     </div>
     <div class="partners-container">
-      <p>yes</p>
+      <a href="https://store.steampowered.com/?l=french">
+        <img
+          class="img-steam"
+          src="../assets/imgs/img-footer-steam.webp"
+          alt=""
+      /></a>
+      <a href="https://www.nintendo.ch/fr/">
+        <img class="img-nintendo" src="../assets/imgs/img-footer-nintendo.webp"
+        alt= />
+      </a>
     </div>
     <div class="footer-img-container"></div>
   </div>
 </template>
-
 <script></script>
 
 <style scoped>
 .footer-container {
-  background-image: url("../assets/imgs/footer.png");
+  background-image: url("../assets/imgs/img-world-footer.webp");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center 30%;
+  background-position: center;
   position: absolute;
   opacity: 1;
   width: 100%;
@@ -80,14 +88,14 @@
 
 .footer-button-container {
   position: absolute;
-  top: 50%;
+  top: 55%;
   scale: 0.8;
   left: 45%;
   transform: translate(-50%, -50%);
 }
 
 .footer-button svg {
-  scale: 0.8;
+  scale: 0.5;
   position: relative;
   bottom: 3px;
 }
@@ -107,10 +115,10 @@
 }
 
 .footer-button {
-  background: linear-gradient(90deg, #d1d3bce4, #cbd1c5e4);
+  background: linear-gradient(90deg, #b4b5a2e4, #c3cfb6e4);
   border: none;
   color: white;
-  width: 25vw;
+  width: 30vw;
   height: 12vh;
   padding: 10px 20px;
   font-size: 1.5rem;
@@ -130,14 +138,14 @@
 }
 
 .footer-button-border {
-  width: 26vw;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.1);
+  width: 31vw;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.2);
   height: 13vh;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 500px;
-  border: 2.5px solid #d1d3bcc0;
+  border: 2.5px solid #b6b99dc0;
   transition: transform 0.2s ease;
 }
 
@@ -149,25 +157,44 @@
   font-family: Wigrum;
   font-size: 38px;
   font-style: normal;
-  font-weight: 500;
-  letter-spacing: 0.75px;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .partners-container {
   position: absolute;
   bottom: 0;
-  margin-bottom: 10vh;
-  width: 100%;
+  left: 33.5%;
+  margin-bottom: 15vh;
+  width: 30%;
+
   height: 20vh;
-  background-color: #f5f0d5;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.footer-img-container {
-  /* alyssa, tu as régler le problème. tu limite redimensionner liamge sur lipade pr que ce soit + slay mais change pas les 100vh du second-world-container */
+a {
+  position: relative;
+  display: flex;
+}
+
+.img-nintendo,
+.img-steam {
+  scale: 0.5;
+  background: radial-gradient(
+    86.62% 50.06% at 45.29% 50%,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  backdrop-filter: blur(2px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.img-nintendo:hover,
+.img-steam:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 </style>
-```

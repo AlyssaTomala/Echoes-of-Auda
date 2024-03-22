@@ -4,7 +4,7 @@
   <headerSection />
   <dlcSection />
   <audaSection />
-  <!-- <worldTransition /> -->
+
   <transitionWorld />
 </template>
 
@@ -14,7 +14,6 @@ import loaderSection from "./components/01loaderSection.vue";
 import headerSection from "./components/02headerSection.vue";
 import dlcSection from "./components/03dlcSection.vue";
 import audaSection from "./components/04audaSection.vue";
-// import worldTransition from "./components/worldTransition.vue";
 import transitionWorld from "./components/05transitionWorld.vue";
 export default {
   components: {
@@ -23,8 +22,12 @@ export default {
     headerSection,
     dlcSection,
     audaSection,
-    // worldTransition,
+
     transitionWorld,
+  },
+
+  mounted() {
+    document.title = "Echoes Of Auda";
   },
 };
 </script>
@@ -61,8 +64,4 @@ body {
   font-family: "Wigrum", sans-serif;
   margin: 0px;
 }
-
-/* * {
-  overflow-x: visible;
-} */
 </style>
